@@ -7,8 +7,8 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "build": "npm install --production",
-    "test": "echo \"No test specified\" && exit 1"
+    "build": "npm install",
+    "vercel-build": "echo hello"
   },
   "author": "",
   "license": "ISC",
@@ -30,8 +30,5 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  },
-  "engines": {
-    "node": "20.x"
   }
 }
