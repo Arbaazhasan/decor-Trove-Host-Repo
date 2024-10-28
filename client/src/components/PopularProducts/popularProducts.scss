@@ -1,0 +1,120 @@
+.popularProduct {
+    // border: 2px solid green;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 3rem 0rem;
+    margin-bottom: 2rem;
+
+    >h1 {
+
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 1rem;
+
+    }
+
+    >.arrivalsProducts {
+        // border: 2px solid green;
+        display: flex;
+        justify-content: center;
+        padding: 30px 0px;
+        gap: 25px;
+        place-items: center;
+
+        >.arrivalProduct {
+            text-decoration: none;
+            // border: 2px solid blue;
+            width: 17vw;
+            height: 20rem;
+
+            &:hover {
+                cursor: pointer;
+
+                >.productPhoto>.addToCart {
+                    display: inline;
+                    opacity: 100;
+                    transition: .3s all;
+
+                }
+            }
+
+            >.productPhoto {
+                // border: 2px solid green;
+                width: 100%;
+                height: 15rem;
+                // background-image: url('../../../public/Ap.jpg');
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                >.ItemTag {
+                    width: fit-content;
+                    padding: 0.2rem 1rem;
+                    margin-top: 1.2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: black;
+                    color: white;
+
+                }
+
+                >.addToCart {
+                    background-color: black;
+                    color: white;
+                    padding: 1rem;
+                    font-family: 'roboto';
+                    font-size: medium;
+                    opacity: 0;
+
+                }
+
+                >img {
+                    width: 100%;
+                }
+            }
+
+            >.nameANdPrice {
+                font-family: 'roboto';
+                font-weight: 400;
+                color: gray;
+                font-size: 1.1rem;
+
+                >p {
+                    margin: 12px;
+                }
+
+                >span {
+                    color: black;
+
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width : 786px) {
+    .popularProduct {
+
+        >.arrivalsProducts {
+            flex-direction: column;
+
+
+            >.arrivalProduct {
+                height: 50vh;
+                width: 100%;
+
+                >.productPhoto {
+                    height: 80%;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+
+                }
+
+            }
+        }
+    }
+}

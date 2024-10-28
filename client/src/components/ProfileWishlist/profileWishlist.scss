@@ -1,0 +1,108 @@
+.profileWishlistWindow {
+    // border: 2px solid blue;
+    padding-top: 5rem;
+
+    >.ProfileWishlistWindow {
+        // border: 2px solid red;
+        padding: 1.5rem;
+        display: grid;
+        gap: 1rem;
+
+        grid-template-columns: repeat(5, 5fr);
+
+
+        >.productDetails {
+            // border: 2px solid blue;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            padding: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            transition: .7s;
+
+
+
+            &:hover {
+                box-shadow: 0px 0px 12px gray;
+                transform: scale(1.07);
+                transition: .7s all;
+            }
+
+
+            >a:nth-child(1) {
+                border: 2px solid red;
+                width: 11rem;
+                height: 11rem;
+                border: 1px solid rgb(160, 160, 160);
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                >img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+
+            }
+
+
+            >div:nth-child(2) {
+                font-size: large;
+                font-weight: bold;
+
+
+            }
+
+            >div:nth-child(3) {
+                font-size: small;
+                color: rgb(83, 83, 83);
+                display: flex;
+                gap: 1rem;
+
+                >span {
+
+                    &:hover {
+                        color: orangered;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            >div:nth-child(4) {
+                // border: 2px solid blue;
+                display: flex;
+                flex-direction: column;
+
+                >button {
+                    padding: .8rem;
+                    font-weight: bold;
+                    background-color: orangered;
+                    color: white;
+                    border: none;
+                    border: 2px solid transparent;
+
+                    &:hover {
+                        background-color: white;
+                        border: 2px solid orangered;
+                        color: orangered;
+                        transition: .7s all;
+                        cursor: pointer;
+                    }
+
+
+                }
+            }
+
+
+
+
+        }
+
+    }
+
+
+}

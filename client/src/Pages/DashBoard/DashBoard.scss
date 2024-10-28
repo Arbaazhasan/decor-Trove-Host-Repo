@@ -1,0 +1,198 @@
+@import '../../style/template';
+
+
+.notSupportDeviceAlert {
+    display: none;
+}
+
+.deshBoard {
+    // border: 2px solid green;
+    display: flex;
+    min-height: 45rem;
+    height: 100vh;
+
+
+
+    >.left {
+        // border: 2px solid red;
+        width: 17%;
+        font-family: 'Open Sans', sans-serif;
+        // font-weight: bold;
+        color: white;
+        box-shadow: -3px 0px 8px gray;
+        background-color: $theme;
+
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        >h1 {
+            font-weight: bold;
+            font-family: 'Reem Kufi', sans-serif;
+            // border: 2px solid red;
+            background-color: rgba(128, 128, 128, 0.11);
+            // box-shadow: -3px 0px 8px gray;
+            padding: .5rem 1rem;
+            color: white;
+
+
+        }
+
+        >div {
+
+            // box-shadow: 0px 10px 8px gray;
+
+            >div {
+                // border: 2px solid green;
+                padding: .5rem 1rem;
+                font-family: 'Roboto', sans-serif;
+
+
+                >h2 {
+                    font-size: large;
+                    // border: 2px solid black;
+                    padding: .3rem .5rem;
+                    font-weight: bolder;
+                    margin-bottom: 1rem;
+                    // display: none;
+
+                }
+
+                >p {
+                    // margin: 0rem 1.5rem;
+                    // margin-top: 1.5rem;
+                    border-bottom: 1px solid transparent;
+                    color: black;
+                    cursor: pointer;
+                    color: white;
+                    padding: .8rem 1rem;
+                    transition: .6s all;
+                    border-bottom: 4px solid rgb(16, 26, 51);
+
+                    // border: 2px solid red;
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    position: relative;
+
+                    >span {
+                        // border: 2px solid red;
+                        font-size: x-large;
+                        display: flex;
+                        color: white;
+
+                        &:nth-child(2) {
+                            text-align: right;
+                            font-size: small;
+                            position: absolute;
+                            right: 13px;
+                            color: white;
+
+
+                        }
+
+
+                    }
+
+
+
+                    &:hover {
+                        font-weight: bolder;
+                        background-color: rgb(29, 49, 100);
+                        transform: scale(1.1);
+                        transition: .4s all;
+
+                    }
+
+
+
+
+                }
+
+            }
+        }
+
+    }
+
+
+    .right {
+        // border: 2px solid green;
+        // width: 80%;
+        width: calc(100% - 17%);
+
+        height: 100%;
+        overflow: hidden;
+
+        >.top {
+            // border-bottom: 1px solid gray;
+            font-family: 'Roboto', sans-serif;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // box-shadow: 0px 0px 8px gray;
+            background-color: rgb(16, 26, 51);
+
+
+
+            >h1 {
+                // border: 2px solid red;
+                padding: 1rem;
+                font-weight: bold;
+                font-family: 'Reem Kufi', sans-serif;
+                padding: .5rem 1rem;
+                color: white;
+            }
+
+            >button {
+                height: 2rem;
+                width: 5rem;
+                margin-right: 2rem;
+                color: $theme;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: $theme;
+                    color: white;
+                    border: 2px solid white;
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+        >.bottom {
+            // border: 2px solid blue;
+        }
+    }
+}
+
+
+
+@media (max-width : 1030px) {
+    .notSupportDeviceAlert {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: rgb(31, 17, 43);
+        color: white;
+        font-size: x-large;
+        padding: 2rem;
+        text-align: center;
+        gap: 2rem;
+
+        >p {
+            font-size: large;
+        }
+
+    }
+
+    .deshBoard {
+        display: none;
+
+    }
+}

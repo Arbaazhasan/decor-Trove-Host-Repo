@@ -1,0 +1,92 @@
+@import '../../style/template';
+
+.BannerController {
+    // border: 2px solid green;
+    height: 90vh;
+    min-height: 41rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    place-items: center;
+
+
+    .sliderBox {
+        // border: 2px solid red;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1rem;
+        gap: 1rem;
+        padding: .4rem 1rem;
+
+        >.heading {
+            // border: 2px solid green;
+            width: 90%;
+            font-family: 'Reem Kufi', sans-serif;
+            font-weight: bold;
+
+        }
+
+        >.sliderImg {
+            // border: 2px solid green;
+            width: 90%;
+            height: 10rem;
+            overflow: hidden;
+            display: grid;
+            place-items: center;
+            place-content: center;
+            box-shadow: 0px 0px 12px gray;
+            border-radius: 12px;
+
+            >label {
+                >img {
+                    width: 100%;
+                }
+            }
+
+
+        }
+
+        >form {
+            // border: 2px solid blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap: 2rem;
+
+
+            >input {
+                // border: 2px solid green;
+                padding: .75rem;
+            }
+
+
+            >button {
+                width: 5rem;
+                height: 2rem;
+                font-family: 'roboto';
+                font-weight: bold;
+                background-color:$btnColor;
+                color: white;
+                cursor: pointer;
+                border: 2px solid transparent;
+                border-radius: 4px;
+
+
+                &:hover {
+                    border: 2px solid$btnColor;
+                    color:$btnColor;
+                    background-color: transparent;
+                    transition: .4s all;
+                }
+
+            }
+        }
+
+
+
+    }
+}

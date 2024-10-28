@@ -1,0 +1,134 @@
+@import "../../style/_template";
+
+@import url($fonts);
+
+.bannerWindow {
+
+    .bannerLine {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.409);
+        width: 80%;
+        height: 8rem;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+
+
+        >div {
+            // border: 2px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-family: 'Reem Kufi', sans-serif;
+
+            >img {
+                width: 3rem;
+            }
+        }
+
+
+    }
+
+    .bannerAdds {
+        // border: 2px solid blue;
+        width: 80%;
+        height: 31rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        >.bannerAdd {
+            // border: 2px solid red;
+            width: 48%;
+            height: 23rem;
+            // background-image: url('../../../public/add1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            overflow: hidden;
+
+            &:hover {
+                >.bannerImg {
+                    top: 0;
+                    transition: 1s all;
+
+                }
+            }
+
+            >.bannerImg {
+                position: relative;
+                top: 23rem;
+                transition: 1s all;
+
+
+            }
+
+            >.bannerContent {
+                position: relative;
+                top: -19rem;
+                left: 2rem;
+
+                >p {
+                    font-size: 5rem;
+                    margin-bottom: 3rem;
+                }
+
+                >a {
+                    border: 2px solid white;
+                    padding: .7rem 2rem;
+                    height: 2.5rem;
+                    font-family: 'roboto';
+                    margin-top: 3rem;
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: white;
+
+
+
+                    &:hover {
+                        color: black;
+                        background-color: white;
+                        transition: .7s all;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+@media (max-width : 786px) {
+    .bannerWindow {
+
+        .bannerLine {
+            >div {
+                >img {
+                    width: 20%;
+                }
+
+                >p {
+                    font-size: x-small;
+                }
+
+            }
+        }
+
+        >.bannerAdds {
+            height: fit-content;
+            flex-direction: column;
+            gap: 2rem;
+            margin-bottom: 3rem;
+
+            >.bannerAdd {
+                width: 100%;
+            }
+
+
+        }
+
+    }
+}

@@ -1,0 +1,406 @@
+.orderWindow {
+    // border: 2px solid green;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    >.shippingDetails {
+        // border: 2px solid red;
+        width: 80%;
+
+
+        >div {
+            // border: 2px solid blue;
+            font-family: 'Reem Kufi', sans-serif;
+            width: 100%;
+            padding: 2rem 0rem;
+
+        }
+
+        >.useDetails {
+            // width: 100%;
+            margin-bottom: 3rem;
+
+
+            >table {
+                >tbody {
+
+                    // border: 2px solid orangered;
+                    width: 100%;
+                    display: grid;
+
+                    grid-template-columns: 1fr 1fr;
+
+
+                    >tr {
+                        // border: 2px solid green;
+
+                        >td {
+
+                            padding: .5rem;
+                            // border: 2px solid green;
+                            width: 35rem;
+
+                            >p {
+                                font-family: 'Reem Kufi', sans-serif;
+                                font-size: medium;
+
+                                >span {
+                                    color: orangered;
+                                    font-size: large;
+                                    font-weight: normal;
+                                }
+
+                            }
+
+                            >input {
+                                padding: .75rem;
+                                font-size: small;
+                                border: 1px solid gray;
+                                width: 100%;
+
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+
+    }
+
+
+    >.shoppingCart {
+        // border: 2px solid red;
+        width: 80%;
+
+        >.left {
+            // border: 2px solid green;
+            // width: 65%;
+
+            >div:nth-child(1) {
+                // border: 2px solid blue;
+                font-family: 'Reem Kufi', sans-serif;
+                padding: 1rem 0rem;
+
+            }
+
+            >.cartProducts {
+                // border: 2px solid orangered;
+
+                >.cartHeader {
+                    // border: 2px solid green;
+                    display: grid;
+                    grid-template-columns: 3.5fr 1fr 1.5fr 1.5fr 1fr;
+                    text-align: center;
+
+
+                    >div {
+                        // border: 2px solid red;
+                        font-family: 'Archivo', sans-serif;
+                        padding: 1rem 0rem;
+                        border-bottom: 1px solid gray;
+
+                    }
+
+                    >div:nth-child(1) {
+                        text-align: left;
+                    }
+
+                }
+
+                >.cartList {
+                    // border: 2px solid purple;
+                    // height: 40rem;
+
+                    >.productDetails {
+                        // border: 2px solid red;
+                        display: grid;
+                        grid-template-columns: 3.5fr 1fr 1.5fr 1.5fr 1fr;
+                        height: fit-content;
+                        font-family: 'Archivo', sans-serif;
+
+                        &:hover {
+                            background-color: rgba(196, 196, 196, 0.285);
+                        }
+
+
+                        >.product {
+                            // border: 2px solid blue;
+                            display: flex;
+                            height: fit-content;
+                            padding: 1rem;
+                            gap: 15px;
+
+                            >.img {
+                                // border: 2px solid green;
+                                width: 10rem;
+                                min-width: 10rem;
+                                height: 6rem;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: 1px solid gray;
+
+
+                                >img {
+                                    max-width: 100%;
+                                    max-height: 100%;
+                                }
+
+
+                            }
+
+                            >.details {
+                                // border: 2px solid red;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: 10px;
+
+
+                                >div:nth-child(1) {
+                                    // border: 2px solid red;
+                                    font-size: x-large;
+                                    color: orangered;
+                                }
+
+
+                                >div:nth-child(2) {
+                                    // border: 2px solid green;
+                                    font-family: 'Roboto', sans-serif;
+                                    font-weight: bold;
+                                    color: gray;
+                                    font-size: small;
+
+                                }
+
+                            }
+
+
+                        }
+
+                        >.productPrice {
+                            // border :2px solid red;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: large;
+
+                        }
+
+
+                        >.productQty {
+                            // border: 2px solid purple;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 15px;
+
+                            >button {
+                                padding: .2rem 1.7rem;
+                                font-size: large;
+                                border: 1px solid gray;
+                                background-color: transparent;
+                                cursor: pointer;
+                                transition: .4s all;
+
+
+                                &:hover {
+                                    background-color: black;
+                                    color: white;
+                                    transition: .4s all;
+                                }
+
+                            }
+
+                            >span {
+                                font-size: large;
+                            }
+
+                        }
+
+                        >.productTotalPrice {
+                            // border: 2px solid green;
+                            margin: auto;
+                            font-size: large;
+
+
+                        }
+
+
+                        >.removeBtn {
+                            // border: 2px solid red;
+                            margin: auto;
+
+
+                            >button {
+                                font-size: x-large;
+                                border: none;
+                                background-color: transparent;
+                                color: gray;
+                                transition: .5s all;
+
+                                &:hover {
+                                    color: red;
+                                    cursor: pointer;
+                                    border: none;
+                                    font-size: xx-large;
+                                    transition: .5s all;
+
+
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+
+
+                >.cartFooter {
+                    // border: 2px solid green;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    border-top: 1px solid gray;
+                    padding: 1rem;
+
+
+                    >table {
+                        >tbody {
+                            // border: 2px solid red;
+                            // margin-right: 10.75rem;
+
+                            >tr {
+                                >td {
+                                    // border: 2px solid green;
+                                    padding: .5rem 1rem;
+                                    font-family: 'Archivo', sans-serif;
+                                    text-align: right;
+                                }
+
+                                >td:nth-child(1) {
+                                    // border: 2px solid red;
+                                    color: gray;
+                                }
+                            }
+
+                            >tr:nth-child(3) {
+                                td {
+                                    // border: 2px solid red;
+                                    font-size: x-large;
+                                }
+
+                            }
+                        }
+                    }
+
+
+
+                }
+
+
+                >.paymentInfo {
+                    // border: 2px solid green;
+                    border-top: 1px solid gray;
+                    padding-top: 1rem;
+
+                    >div {
+                        // border: 2px solid red;
+                        font-family: 'Reem Kufi', sans-serif;
+                        padding: 1rem 0rem;
+
+                        >h2 {
+                            font-size: xx-large;
+                            // border: 2px solid green;
+                        }
+
+                    }
+
+                    >div:nth-child(2) {
+
+                        // border: 2px solid red;
+                        margin-bottom: 5rem;
+                        font-family: 'Reem Kufi', sans-serif;
+                        width: 50%;
+
+
+                        >div:nth-child(1) {
+                            // border: 3px solid red;
+                            padding: 1rem;
+                            font-family: 'Reem Kufi', sans-serif;
+                            font-size: medium;
+                            border-bottom: 1px solid gray;
+                        }
+
+                        >.selectMethod {
+                            // border: 2px solid green;
+                            padding: .5rem 0rem;
+
+                            >div {
+                                // border: 2px solid red;
+                                display: flex;
+                                align-items: center;
+                                padding: .5rem 1rem;
+                                gap: .6rem;
+                                font-size: large;
+
+                            }
+                        }
+
+                        >.checkoutBtn {
+                            padding: 1rem;
+
+                            >a {
+
+                                >button {
+                                    padding: .8rem;
+                                    width: 100%;
+                                    background-color: rgb(68, 68, 226);
+                                    color: white;
+                                    font-family: 'Reem Kufi', sans-serif;
+                                    border: 2px solid transparent;
+                                    cursor: pointer;
+                                    transition: .4s all;
+
+
+                                    &:hover {
+                                        border: 2px solid rgb(68, 68, 226);
+                                        background-color: white;
+                                        color: rgb(68, 68, 226);
+                                        transition: .4s all;
+                                        transform: scale(1.1);
+
+                                    }
+
+
+                                }
+
+                            }
+                        }
+
+
+
+                    }
+
+                }
+
+
+
+            }
+
+
+
+        }
+
+    }
+
+}

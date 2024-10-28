@@ -1,0 +1,192 @@
+.wishList {
+    // border: 2px solid blue;
+    width: 80%;
+    margin: auto;
+    font-family: 'roboto';
+    height: 100vh;
+    overflow: hidden;
+
+
+
+    >.wishListHeader {
+        // border: 2px solid green;
+        font-weight: bolder;
+        padding: 1.5rem 1rem;
+        height: 10%;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.217);
+
+
+    }
+
+    >.itemsList {
+        // border: 2px solid red;
+        width: 100%;
+        margin: auto;
+        overflow: scroll;
+        height: 90vh;
+        padding-bottom: 1.5rem;
+        scroll-behavior: smooth;
+
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        >.listItem {
+            // border: 2px solid blue;
+            text-decoration: none;
+            color: black;
+            width: 82%;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            border: 1px solid gray;
+            // border: 2px solid blue;
+            margin: auto;
+            margin-top: 1.5rem;
+
+            &:hover {
+                // border : 3px solid black;
+                transform: scale(1.05);
+                transition: .5s all;
+                box-shadow: 0px 0px 8px rgba(128, 128, 128, 0.346);
+            }
+
+
+            >.itemPhoto {
+                // border: 2px solid purple;
+                width: 12rem;
+                height: 12rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                border: 1px solid rgba(128, 128, 128, 0.418);
+
+                >img {
+                    width: 100%;
+                }
+            }
+
+            >.ItemDetails {
+                // border: 2px solid brown;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 34rem;
+                text-decoration: none;
+                color: black;
+
+
+
+                >p {
+                    // border: 2px solid green;
+                    font-size: x-large;
+                    font-weight: bold;
+                }
+
+                >.rateing {
+                    // border: 2px solid blue;
+                    color: orangered;
+                }
+
+                >.itemPrice {
+                    // border: 2px solid green;
+                    font-size: large;
+                    font-weight: bold;
+                    color: orangered;
+                }
+
+                >.itemInformation {
+                    // border: 2px solid red;
+                    font-size: small;
+                    color: gray;
+                    letter-spacing: 1px;
+                    line-height: 20px;
+                    height: 45%;
+                    overflow: hidden;
+                }
+            }
+
+            >.tocartBtn {
+                // border: 2px solid green;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                gap: 12px;
+                cursor: pointer;
+
+                >p {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    width: 100%;
+
+                    justify-content: f;
+
+                    span {
+                        // border: 2px solid green;
+                        padding: .2rem .5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: large;
+                        font-weight: bold;
+
+                        &:hover {
+                            color: orangered;
+                        }
+                    }
+                }
+
+                >button {
+                    border: none;
+                    background-color: black;
+                    color: white;
+                    padding: 1rem 2rem;
+                    border: 2px solid transparent;
+                    letter-spacing: 1px;
+
+
+
+                    &:hover {
+                        border: 2px solid black;
+                        color: black;
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+@media (max-width : 786px) {
+
+    .wishList {
+        width: 95%;
+        padding: 0;
+
+        >.itemsList {
+
+            >.listItem {
+                width: 100%;
+                gap: 1rem;
+
+                &:hover{
+                    transform: none;
+                }
+            }
+
+        }
+
+    }
+
+
+
+}

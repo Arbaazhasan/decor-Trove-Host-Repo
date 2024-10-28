@@ -1,0 +1,101 @@
+@import '../../style/template';
+
+.sliderWindow {
+    // border: 2px solid green;
+    min-height: 41rem;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    place-content: center;
+
+    >.sliderBox {
+        // border: 2px solid red;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1rem;
+        gap: 1rem;
+        padding: 1rem;
+
+
+
+        >.sliderImg {
+            // border: 2px solid green;
+            width: 90%;
+            height: 10rem;
+            overflow: hidden;
+            display: grid;
+            place-items: center;
+            box-shadow: 0px 0px 12px gray;
+            border-radius: 12px;
+            display: flex;
+
+            >label {
+
+                >img {
+                    max-width: 100%;
+                    max-height: 100%;
+
+                }
+            }
+
+
+        }
+
+        >form {
+            // border: 2px solid blue;
+            display: flex;
+            width: 80%;
+            flex-direction: column;
+
+            >input {
+                // border: 2px solid green;
+                padding: .75rem;
+                margin-bottom: 1rem;
+            }
+
+            >div {
+
+                >button {
+                    width: 5rem;
+                    height: 2rem;
+                    font-family: 'roboto';
+                    font-weight: bold;
+                    background-color: $btnColor;
+                    color: white;
+                    cursor: pointer;
+                    border: none;
+                    border: 2px solid transparent;
+                    border-radius: 4px;
+                    margin-right: 1rem;
+
+
+                    &:hover {
+                        border: 2px solid$btnColor;
+                        color: $btnColor;
+                        background-color: transparent;
+                        transition: .4s all;
+                    }
+
+                }
+
+                >button:nth-child(2) {
+                    background-color: rgb(161, 0, 0);
+
+                    &:hover {
+                        background-color: white;
+                        color: red;
+                        border: 2px solid red;
+                    }
+                }
+
+
+            }
+        }
+
+
+
+    }
+}

@@ -1,0 +1,119 @@
+// @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Lato:wght@400;700;900&family=Open+Sans:wght@300&family=Roboto&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Lato:wght@400;700;900&family=Open+Sans:wght@300&family=Reem+Kufi&family=Roboto&display=swap');
+
+// font-family: 'Archivo', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Reem Kufi', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+
+.headerBar {
+    // border: 2px solid green;
+    width: 100%;
+    padding: 0% 10%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.312);
+
+    >.brandName {
+        // border: 2px solid pink;
+        font-size: 2.5rem;
+        width: 25%;
+        font-family: 'Open Sans', sans-serif;
+
+        >span {
+            >span {
+                color: red;
+                font-family: 'Archivo', sans-serif;
+            }
+        }
+
+    }
+
+    >.menu {
+        // border: 2px solid red;
+        width: 50%;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+
+
+        >a {
+            text-decoration: none;
+            color: black;
+            font-size: large;
+            padding: 50px;
+
+            &:hover {
+                font-weight: bold;
+            }
+        }
+
+
+    }
+
+    >.cart {
+
+        // border: 2px solid blue;
+        width: 25%;
+        text-align: right;
+        font-size: xx-large;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: rgb(61, 61, 61);
+
+
+
+        >a {
+            // border: 2px solid green;
+            text-decoration: none;
+            color: black;
+            margin-left: 15px;
+
+            >span {
+                // border: 2px solid green;
+                display: flex;
+
+            }
+
+            >.OpenWindow {
+                border: 2px solid red;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+
+    }
+}
+
+
+
+.shoppingIcon {
+    display: none;
+}
+
+@media (max-width:786px) {
+
+    .menu {
+        display: none;
+    }
+
+    .headerBar {
+        justify-content: space-between;
+    }
+
+    .shoppingIcon {
+        // border: 2px solid red;
+        display: flex;
+    }
+
+
+
+}

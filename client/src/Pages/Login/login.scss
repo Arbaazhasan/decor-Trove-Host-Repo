@@ -1,0 +1,166 @@
+.loginPage {
+    // border: 2px solid green;
+    width: 60%;
+    margin: auto;
+    min-height: 40rem;
+    height: 41rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    >.goToHome {
+        // border: 2px solid red;
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+        text-decoration: none;
+        color: black;
+
+        >span {
+            font-size: xx-large;
+        }
+    }
+
+    >.heading {
+        // border: 2px solid red;
+        text-align: center;
+        letter-spacing: 2px;
+        font-family: 'Reem Kufi', sans-serif;
+        font-weight: bolder;
+    }
+
+    >form {
+        // border: 2px solid blue;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        >div {
+            // border: 2px solid green;
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            // height: 7rem;
+            margin: 1rem auto;
+            font-family: 'roboto';
+            font-weight: bold;
+
+            >label {
+                margin-bottom: .5rem;
+
+            }
+
+            >input {
+
+                padding: .7rem;
+
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            >div {
+                // border: 2px solid red;
+                font-size: small;
+                margin: .5rem 0rem 1rem;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+            }
+
+
+        }
+
+
+
+        >button {
+            width: 60%;
+            margin: auto;
+            padding: 1rem;
+            background-color: transparent;
+            border: 2px solid black;
+            font-family: 'roboto';
+            font-weight: bold;
+
+            &:hover {
+                background-color: black;
+                color: white;
+                transition: .2s all;
+            }
+
+        }
+
+    }
+
+
+    >.or {
+        // border: 2px solid green;
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+
+        >p {
+            font-size: large;
+            font-family: 'roboto';
+        }
+
+
+
+    }
+
+    >button {
+        width: 60%;
+        padding: 1rem;
+        background-color: white;
+        font-weight: bold;
+        border: 2px solid black;
+        margin: 0rem auto;
+
+        &:hover {
+            background-color: black;
+            color: white;
+            transition: .2s all;
+        }
+
+    }
+
+    >.footer {
+        position: absolute;
+        bottom: 0;
+        background-color: black;
+        width: 100%;
+        color: white;
+        padding: .5rem 1rem;
+
+        >button {
+            border: 2px solid white;
+            background-color: black;
+            color: white;
+            padding: .2rem .5rem;
+
+            &:hover {
+                background-color: white;
+                color: black;
+                // font-weight: bold;
+                cursor: pointer;
+                transition: .3s;
+            }
+        }
+
+    }
+}
+
+
+
+@media (max-width : 796px) {
+
+    .loginPage {
+        // border: 2px solid red;
+        width: 100%;
+    }
+
+
+}

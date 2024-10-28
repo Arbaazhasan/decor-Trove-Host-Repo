@@ -1,0 +1,121 @@
+@import '../../style/template';
+
+.ArrivalController {
+    // border: 2px solid green;
+    height: 41rem;
+
+    >.selectArrival {
+        // border: 2px solid red;
+        padding: 1rem;
+        border-bottom: 1px solid gray;
+
+        >select {
+            padding: .5rem 1rem;
+
+
+        }
+
+        >option {
+            // border: 2px solid red;
+        }
+    }
+
+
+    >.arrivalName {
+        // border: 2px solid green;
+        padding: 1rem;
+
+        >form {
+            // border: 2px solid red;
+            // padding: 1rem;
+
+
+            >p {
+                // border: 2px solid red;
+                font-family: 'Reem Kufi', sans-serif;
+                font-size: small;
+                margin-bottom: .5rem;
+                font-weight: bold;
+
+            }
+
+            >input {
+                padding: .5rem 1rem;
+            }
+
+            >button {
+                border: none;
+                padding: .5rem 1rem;
+                background-color:$btnColor;
+                color: white;
+                margin-left: 1rem;
+                cursor: pointer;
+                border: 2px solid transparent;
+                font-weight: bold;
+                letter-spacing: 1px;
+
+
+                &:hover {
+                    background-color: transparent;
+                    border: 2px solid$btnColor;
+                    color:$btnColor;
+                    transition: .5s all;
+                }
+            }
+        }
+    }
+
+
+    >.arrivalProducts {
+        // border: 2px solid green;
+        // height: 74%;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0rem 6rem;
+
+        >div {
+
+            >form {
+                // border: 2px solid red;
+                width: max-content;
+                margin: 1.6rem 5rem;
+
+                >p {
+                    // border: 1px solid blue;
+                    font-family: 'Reem Kufi', sans-serif;
+                    margin-bottom: .5rem;
+
+                }
+
+                >input {
+                    padding: .5rem 1rem;
+                }
+
+                >button {
+                    border: none;
+                    padding: .5rem 1rem;
+                    background-color:$btnColor;
+                    color: white;
+                    margin-left: 1rem;
+                    cursor: pointer;
+                    border: 2px solid transparent;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+
+
+                    &:hover {
+                        background-color: transparent;
+                        border: 2px solid$btnColor;
+                        color:$btnColor;
+                        transition: .5s all;
+
+                    }
+                }
+            }
+        }
+    }
+}

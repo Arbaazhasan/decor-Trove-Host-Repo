@@ -1,0 +1,193 @@
+.imageViewer {
+    // border: 2px solid green;
+    width: 100vw;
+    height: 100vh;
+    min-height: 43rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    background-color: rgba(90, 90, 90, 0.881);
+    z-index: 100;
+
+
+    >.closeViewer {
+        position: absolute;
+        top: 2.5rem;
+        right: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        display: grid;
+        place-content: center;
+        font-size: 3rem;
+        cursor: pointer;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        border-radius: 100%;
+        box-shadow: 0px 0px 12px black;
+
+        &:hover {
+            transform: scale(1.15);
+            transition: .5s all;
+            color: red;
+
+        }
+
+    }
+
+    >.imageView {
+        // border: 2px solid red;
+        width: 80%;
+        height: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 3rem;
+        color: white;
+
+        >.left {
+            // border: 2px solid green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: .7rem;
+
+            >button {
+                background-color: transparent;
+                font-size: 3.5rem;
+                color: white;
+                border: none;
+                display: flex;
+            }
+
+            cursor: pointer;
+            border: 4px solid transparent;
+            outline: 1px solid white;
+            border-radius: 100%;
+
+
+            &:hover {
+                border: 4px solid white;
+                transition: .5s all;
+                box-shadow: 0px 0px 12px black;
+                outline: 1px solid transparent;
+            }
+        }
+
+        >.center {
+            // border: 2px solid blue;
+            width: 70%;
+            height: 100%;
+            cursor: pointer;
+
+            >.image {
+                // border: 2px solid green;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+
+                >img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    box-shadow: 0px 0px 15px black;
+                }
+
+            }
+
+        }
+
+        >.right {
+            // border: 2px solid green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: .7rem;
+
+            >button {
+                background-color: transparent;
+                font-size: 3.5rem;
+                color: white;
+                border: none;
+                display: flex;
+            }
+
+            cursor: pointer;
+            border: 4px solid transparent;
+            outline: 1px solid white;
+            border-radius: 100%;
+
+
+            &:hover {
+                border: 4px solid white;
+                transition: .5s all;
+                box-shadow: 0px 0px 12px black;
+                outline: 1px solid transparent;
+            }
+        }
+
+    }
+
+    >.viewerImageBar {
+        // border: 2px solid blue;
+        width: 70%;
+        height: 20%;
+        padding: .7rem .7rem;
+        border: 1px solid white;
+
+
+
+        >.imagesArray {
+            // border: 2px solid blue;
+            display: flex;
+            height: 100%;
+            align-items: center;
+            overflow-x: scroll;
+
+
+            >.images {
+                // border: 2px solid green;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+
+                >.image {
+                    // border: 1px solid white;
+                    width: 7rem;
+                    height: 80%;
+                    display: grid;
+                    place-content: center;
+                    margin-right: .7rem;
+                    overflow: hidden;
+                    cursor: pointer;
+                    transition: width 0.5s ease;
+
+
+                    &:hover {
+                        width: 10rem;
+                        height: 100%;
+                    }
+
+
+                    >img {
+                        width: 100%;
+
+                        &:hover {
+                            padding: .5rem;
+                            border: 1px solid white;
+
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
+}
