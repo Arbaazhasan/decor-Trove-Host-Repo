@@ -2,50 +2,47 @@ import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
-// Import your other dependencies
+// Import other dependencies
 
 dotenv.config();
 
-const createServer = () => {
-  const app = express();
+const app = express();
 
-  // Middleware
-  app.use(cors({
-    origin: process.env.FRONTEND_URL,
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  }));
-  app.use(cookieParser());
-  app.use(express.json());
-  app.use(express.urlencoded({ extended: true }));
+// Middleware
+app.use(cors({
+  origin: process.env.FRONTEND_URL || '*',
+  credentials: true
+}));
+app.use(cookieParser());
+app.use(express.json({ limit: '50mb' }));
+app.use(express.urlencoded({ extended: true }));
 
-  // Your routes here
-  // app.use("/api/v1", userRouter);
-  // Other route configurations...
+// Health check route
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
 
-  // Add a test route
-  app.get('/api/test', (req, res) => {
-    res.json({ message: 'API is working!' });
-  });
+// Your routes here
+// app.use('/api/v1/users', userRoutes);
+// etc...
 
-  // Error handling middleware
-  app.use((err, req, res, next) => {
-    const status = err.status || 500;
-    const message = err.message || "Internal Server Error";
-    res.status(status).json({ success: false, message });
-  });
+// Error handling
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ message: 'Something went wrong!' });
+});
 
-  return app;
-};
+// Handle 404
+app.use((req, res) => {
+  res.status(404).json({ message: 'Not Found' });
+});
 
-// For local development
+// Development server
 if (process.env.NODE_ENV !== 'production') {
-  const app = createServer();
   const PORT = process.env.PORT || 4000;
   app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
   });
 }
 
-// Export the function for Vercel
-export default createServer;
+export default app;

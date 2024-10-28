@@ -3,16 +3,23 @@
   "builds": [
     {
       "src": "app.js",
-      "use": "@vercel/node@3"
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "app.js"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/app.js"
+      "dest": "app.js"
     }
   ],
-  "env": {
-    "NODE_ENV": "production"
+  "functions": {
+    "app.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
   }
 }
